@@ -1,3 +1,9 @@
-# YouTube Video
+#tilliesnftmarketplace
 
-You can view the YouTube video here: https://www.youtube.com/watch?v=RGNX2Xor1Y0# tilliesnftmarketplace
+Tillies NFT Marketplace is a Gas Free Marketplace built on the Flow blockchain. 
+
+People are able to create, buy, and sell NFT's and also comment on each others NFT's. 
+
+Credit to Jacob Tucker for his educational Flow resources. 
+
+Created by Brian, Merissa, Danika, Ryan
