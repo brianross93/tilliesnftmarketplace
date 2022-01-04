@@ -1,4 +1,4 @@
-#tilliesnftmarketplace
+# Tillies NFT Marketplace
 
 Tillies NFT Marketplace is a Gas Free Marketplace built on the Flow blockchain. 
 
