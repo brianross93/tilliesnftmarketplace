@@ -1,7 +1,7 @@
 export const getSaleNFTsScript = `
-import MyNFT from 0x40582f87fa3d66cb
+import MyNFT from 0x77843dcd06310709
 import NonFungibleToken from 0x631e88ae7f1d7c20
-import NFTMarketplace from 0x40582f87fa3d66cb
+import NFTMarketplace from 0x77843dcd06310709
 
 pub fun main(account: Address): {UInt64: NFTMarketplace.SaleItem} {
   let saleCollection = getAccount(account).getCapability(/public/MySaleCollection)
