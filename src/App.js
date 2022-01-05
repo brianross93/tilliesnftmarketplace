@@ -41,7 +41,9 @@ function App() {
     // log in through Blocto
     fcl.authenticate();
   }
+  // This is an async function for minting NFTs. It's calling mintNFT imported from mint_nft.js
 
+  //most of these are ultimately passing arguents to functions that have been imported 
   const mint = async () => {
 
     try {
@@ -68,7 +70,8 @@ function App() {
   }
 
   
-
+  // This sets up a user. This is creating their account address where they will create and store
+  //their blockchain items
   const setupUser = async () => {
     const transactionId = await fcl.send([
       fcl.transaction(setupUserTx),
@@ -83,6 +86,7 @@ function App() {
     return fcl.tx(transactionId).onceSealed();
   }
 
+  // Sends argjuents for listForSaleTx
   const listForSale = async () => {
     const transactionId = await fcl.send([
       fcl.transaction(listForSaleTx),
@@ -99,7 +103,7 @@ function App() {
     console.log(transactionId);
     return fcl.tx(transactionId).onceSealed();
   }
-
+// UnlistFromSaleTx which is imported above
   const unlistFromSale = async () => {
     const transactionId = await fcl.send([
       fcl.transaction(unlistFromSaleTx),
@@ -144,7 +148,7 @@ function App() {
         <button onClick={() => unlistFromSale()}>Unlist an NFT from Sale</button>
       </div>
       
-
+{/* This ultimately shows the collection  */}
       { user && user.addr && officialAddress && officialAddress !== ''
       
         ?
@@ -152,7 +156,7 @@ function App() {
         :
         null
       }
-
+{/* This displays the NFT's that are for sale per account address */}
       { user && user.addr && officialAddress && officialAddress !== ''
       
       ?
