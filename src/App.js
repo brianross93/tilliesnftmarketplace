@@ -1,6 +1,6 @@
 // imports
 import './App.css';
-import LoginSetup from './Main';
+import LoginSetup from './LoginSetup';
 import Mint from './Mint';
 
 function App() {
