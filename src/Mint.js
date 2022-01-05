@@ -91,7 +91,7 @@ function Mint() {
   };
   console.log(<Collection address={officialAddress}></Collection>);
   return (
-    <div className='App'>
+    <div className='mint'>
       <div>
         <input type='text' onChange={(e) => setNameOfNFT(e.target.value)} />
         <input type='file' onChange={(e) => setFile(e.target.files[0])} />
