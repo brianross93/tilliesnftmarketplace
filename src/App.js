@@ -1,12 +1,12 @@
 // imports
 import './App.css';
-import Main from './Main';
+import LoginSetup from './Main';
 import Mint from './Mint';
 
 function App() {
   return (
     <div className='App'>
-      <Main />
+      <LoginSetup />
       <Mint />
     </div>
   );
