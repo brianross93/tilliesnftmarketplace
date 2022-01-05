@@ -10,7 +10,7 @@ fcl
   .put('accessNode.api', 'https://access-testnet.onflow.org')
   .put('discovery.wallet', 'https://fcl-discovery.onflow.org/testnet/authn');
 
-function Main() {
+function LoginSetup() {
   const [user, setUser] = useState();
   const [address, setAddress] = useState();
   const [officialAddress, setOfficialAddress] = useState('');
@@ -45,7 +45,7 @@ function Main() {
 
   console.log(<Collection address={officialAddress}></Collection>);
   return (
-    <div className='App'>
+    <div className='login'>
       <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
       <button onClick={() => logIn()}>Log In</button>
       <button onClick={() => fcl.unauthenticate()}>Log Out</button>
@@ -59,4 +59,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default LoginSetup;
