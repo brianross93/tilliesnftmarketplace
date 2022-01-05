@@ -112,7 +112,6 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Hello this is a front end test</h1>
       <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
       <button onClick={() => logIn()}>Log In</button>
       <button onClick={() => fcl.unauthenticate()}>Log Out</button>
