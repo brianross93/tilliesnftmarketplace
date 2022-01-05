@@ -49,6 +49,8 @@ pub contract NFTMarketplace {
 
       recipientCollection.deposit(token: <- self.MyNFTCollection.borrow()!.withdraw(withdrawID: id))
       self.FlowTokenVault.borrow()!.deposit(from: <- payment)
+      self.unlistFromSale(id:id)
+      
     }
 
     pub fun getPrice(id: UInt64): UFix64 {
