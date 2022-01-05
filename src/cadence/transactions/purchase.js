@@ -1,17 +1,17 @@
 export const purchaseTx = `
-import MyNFT from 0x40582f87fa3d66cb
+import MyNFT from 0x77843dcd06310709
 import NonFungibleToken from 0x631e88ae7f1d7c20
-import NFTMarketplace from 0x40582f87fa3d66cb
+import NFTMarketplace from 0x77843dcd06310709
 import FlowToken from 0x7e60df042a9c0868
 
 transaction(account: Address, id: UInt64) {
 
   prepare(acct: AuthAccount) {
-    let saleCollection = getAccount(account).getCapability(/public/MySaleCollection)
+    let saleCollection = getAccount(account).getCapability(/public/TestSaleCollection)
                         .borrow<&NFTMarketplace.SaleCollection{NFTMarketplace.SaleCollectionPublic}>()
                         ?? panic("Could not borrow the user's SaleCollection")
 
-    let recipientCollection = getAccount(acct.address).getCapability(/public/MyNFTCollection) 
+    let recipientCollection = getAccount(acct.address).getCapability(/public/TestCollection) 
                     .borrow<&MyNFT.Collection{NonFungibleToken.CollectionPublic}>()
                     ?? panic("Can't get the User's collection.")
 

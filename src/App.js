@@ -3,6 +3,8 @@ import './App.css';
 import Collection from "./Collection.js";
 import SaleCollection from "./SaleCollection.js";
 
+
+
 import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types";
 import {useState, useEffect} from 'react';
@@ -11,6 +13,9 @@ import {mintNFT} from "./cadence/transactions/mint_nft.js";
 import {setupUserTx} from "./cadence/transactions/setup_user.js";
 import {listForSaleTx} from "./cadence/transactions/list_for_sale.js";
 import {unlistFromSaleTx} from "./cadence/transactions/unlist_from_sale.js";
+
+
+
 
 const client = create('https://ipfs.infura.io:5001/api/v0');
 
@@ -62,6 +67,8 @@ function App() {
     }
   }
 
+  
+
   const setupUser = async () => {
     const transactionId = await fcl.send([
       fcl.transaction(setupUserTx),
@@ -107,8 +114,10 @@ function App() {
 
     console.log(transactionId);
     return fcl.tx(transactionId).onceSealed();
-  }
 
+    
+  }
+  console.log(<Collection address={officialAddress}></Collection>)
   return (
     <div className="App">
       <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
@@ -127,14 +136,17 @@ function App() {
         <button onClick={() => mint()}>Mint</button>
       </div>
 
+      
       <div>
         <input type="text" onChange={(e) => setID(e.target.value)} />
         <input type="text" onChange={(e) => setPrice(e.target.value)} />
         <button onClick={() => listForSale()}>Lift NFT for Sale</button>
         <button onClick={() => unlistFromSale()}>Unlist an NFT from Sale</button>
       </div>
+      
 
       { user && user.addr && officialAddress && officialAddress !== ''
+      
         ?
         <Collection address={officialAddress}></Collection>
         :
@@ -142,15 +154,21 @@ function App() {
       }
 
       { user && user.addr && officialAddress && officialAddress !== ''
-        ?
-        <SaleCollection address={officialAddress}></SaleCollection>
-        :
-        null
+      
+      ?
+      <SaleCollection address={officialAddress}></SaleCollection>
+      :
+      null
       }
+      
+
+      
       
       
     </div>
+    
   );
+  
 }
 
 export default App;
