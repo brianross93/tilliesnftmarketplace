@@ -1,10 +1,10 @@
 export const mintNFT = `
-import MyNFT from 0x40582f87fa3d66cb
+import MyNFT from 0x77843dcd06310709
 
 transaction(ipfsHash: String, name: String) {
 
   prepare(acct: AuthAccount) {
-    let collection = acct.borrow<&MyNFT.Collection>(from: /storage/MyNFTCollection)
+    let collection = acct.borrow<&MyNFT.Collection>(from: /storage/TestCollection)
                         ?? panic("This collection does not exist here")
 
     let nft <- MyNFT.createToken(ipfsHash: ipfsHash, metadata: {"name": name})
