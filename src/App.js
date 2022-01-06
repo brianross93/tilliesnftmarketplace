@@ -9,16 +9,18 @@ import Create from './components/create/Create';
 import Error from './components/Error';
 import LoginSetup from './LoginSetup';
 import Mint from './Mint';
+import DarkMode from './components/darkmode/darkmode';
 
 export default function App() {
   return (
     <div className='App'>
       <NavBar />
+      <DarkMode />
       <Routes>
-        <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} />
-        <Route path="/market" component={Market} />
-        <Route path="/create" component={Create} />
+        <Route path='/' component={Home} exact />
+        <Route path='/about' component={About} />
+        <Route path='/market' component={Market} />
+        <Route path='/create' component={Create} />
         <Route component={Error} />
       </Routes>
       <LoginSetup />
