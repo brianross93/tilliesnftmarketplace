@@ -1,12 +1,12 @@
 // imports
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar/NavBar';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Market from './components/market/Market';
 import Create from './components/create/Create';
-import Error from "./components/Error";
+import Error from './components/Error';
 import LoginSetup from './LoginSetup';
 import Mint from './Mint';
 
