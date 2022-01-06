@@ -10,6 +10,9 @@ function Navbar() {
       <Link to="/market"> Market </Link>
       <Link to="/create"> Create </Link>
     </div>
+
+    
+    
   );
 };
 
