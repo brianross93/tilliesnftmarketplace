@@ -1,5 +1,5 @@
 // imports
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/navbar/NavBar';
 import Home from './components/home/Home';
@@ -16,13 +16,13 @@ export default function App() {
     <div className='App'>
       <NavBar />
       <DarkMode />
-      <Routes>
-        <Route path='/' component={Home} exact />
-        <Route path='/about' component={About} />
-        <Route path='/market' component={Market} />
-        <Route path='/create' component={Create} />
-        <Route component={Error} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home/>} exact ></Route>
+          <Route path='/about' element={<About/>} ></Route>
+          <Route path='/market' element={<Market/>} ></Route>
+          <Route path='/create' element={<Create/>} ></Route>
+          <Route element={<Error/>} ></Route>
+        </Routes>
       <LoginSetup />
       <Mint />
     </div>
