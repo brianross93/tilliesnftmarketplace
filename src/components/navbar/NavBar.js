@@ -6,6 +6,8 @@ import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import DarkMode from '../darkmode/darkmode';
+import logo from '../navbar/TiLLiES_logo.png';
 
 fcl
   .config()
@@ -30,7 +32,7 @@ export default function NavBar() {
       <Navbar bg='light' expand='lg'>
         <Container>
           <Navbar.Brand href='/'>
-            <img src={'./TiLLiES_logo.png'} alt='Tillies logo' />
+            <img src={logo} alt='Tillies Logo'></img>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
@@ -47,6 +49,7 @@ export default function NavBar() {
               <LinkContainer to='/about'>
                 <Nav.Link to='/about'>About</Nav.Link>
               </LinkContainer>
+              <DarkMode />
             </Nav>
           </Navbar.Collapse>
         </Container>
