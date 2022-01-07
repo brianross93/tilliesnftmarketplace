@@ -1,43 +1,26 @@
 // imports 
+import './NavBar.css';
 import React from "react";
+import { Navbar, Container } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 
 export default class Nav extends React.Component {
   render() {    
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark ">
-        <div className="Nav container-fluid">
-          <a className="navbar-brand" href="#">Navbar</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarColor02">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  <Link to="/"> Home </Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <Link to="/market"> Market </Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <Link to="/create"> Create </Link>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <Link to="/about"> About </Link>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar bg="#435058" expand="lg">
+        <Container>
+          <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link to="/">Home</Nav.Link>
+              <Nav.Link to="/market">Market</Nav.Link>
+              <Nav.Link to="/create">Create</Nav.Link>
+              <Nav.Link to="/about">About</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     );
   }
 }
