@@ -16,13 +16,13 @@ export default function App() {
     <div className='App'>
       <NavBar />
       <DarkMode />
-        <Routes>
-          <Route path='/' element={<Home/>} exact ></Route>
-          <Route path='/about' element={<About/>} ></Route>
-          <Route path='/market' element={<Market/>} ></Route>
-          <Route path='/create' element={<Create/>} ></Route>
-          <Route element={<Error/>} ></Route>
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Home />} exact></Route>
+        <Route path='/about' element={<About />}></Route>
+        <Route path='/market' element={<Market />}></Route>
+        <Route path='/create' element={<Create />}></Route>
+        <Route element={<Error />}></Route>
+      </Routes>
       <LoginSetup />
       <Mint />
     </div>
