@@ -1,6 +1,5 @@
 // imports
 import './App.css';
-import Collection from './Collection.js';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
 import { setupUserTx } from './cadence/transactions/setup_user.js';
@@ -11,7 +10,7 @@ fcl
   .put('discovery.wallet', 'https://fcl-discovery.onflow.org/testnet/authn');
 
 function LoginSetup() {
-  const [user, setUser] = useState();
+  const [users, setUser] = useState([]);
   
   useEffect(() => {
     // sets the `user` variable to the person that is logged in through Blocto
@@ -40,12 +39,8 @@ function LoginSetup() {
     console.log(transactionId);
     return fcl.tx(transactionId).onceSealed();
   };
-
   return (
     <div className='login'>
-      <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
-      <button onClick={() => logIn()}>Log In</button>
-      <button onClick={() => fcl.unauthenticate()}>Log Out</button>
       <button onClick={() => setupUser()}>Setup User</button>
     </div>
   );
