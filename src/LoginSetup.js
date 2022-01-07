@@ -3,8 +3,6 @@ import './App.css';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
 import { setupUserTx } from './cadence/transactions/setup_user.js';
-import { db } from './firebase-config';
-import { collection, getDocs } from 'firebase/firestore'
 
 fcl
   .config()
@@ -13,8 +11,7 @@ fcl
 
 function LoginSetup() {
   const [users, setUser] = useState([]);
-  const usersCollection = collection(db, "users")
-
+  
   useEffect(() => {
     // sets the `user` variable to the person that is logged in through Blocto
     fcl.currentUser().subscribe(setUser);
