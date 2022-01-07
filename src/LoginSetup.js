@@ -4,6 +4,8 @@ import Collection from './Collection.js';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
 import { setupUserTx } from './cadence/transactions/setup_user.js';
+import { db } from './firebase-config';
+import { collection, getDocs } from 'firebase/firestore'
 
 fcl
   .config()
@@ -11,11 +13,20 @@ fcl
   .put('discovery.wallet', 'https://fcl-discovery.onflow.org/testnet/authn');
 
 function LoginSetup() {
-  const [user, setUser] = useState();
-  
+  const [user, setUser] = useState([]);
+  const usersCollection = collection(db, 'users')
+
   useEffect(() => {
     // sets the `user` variable to the person that is logged in through Blocto
     fcl.currentUser().subscribe(setUser);
+    //create a async function
+    const getUsers = async () => {
+      //this returns all the documents inside the users collection
+      const data = await getDocs(usersCollection);
+      //this spreads the collection so we can obtain just the data and id
+      setUser(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    }
+    getUsers();
   }, []);
 
   const logIn = () => {
@@ -43,9 +54,6 @@ function LoginSetup() {
 
   return (
     <div className='login'>
-      <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
-      <button onClick={() => logIn()}>Log In</button>
-      <button onClick={() => fcl.unauthenticate()}>Log Out</button>
       <button onClick={() => setupUser()}>Setup User</button>
     </div>
   );
