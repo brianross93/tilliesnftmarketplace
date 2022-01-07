@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import DarkMode from '../darkmode/darkmode';
-import logo from '../navbar/TiLLiES_logo.png';
+import logo from '../navbar/tillieslogonew.png';
 
 fcl
   .config()
