@@ -25,6 +25,7 @@ function LoginSetup() {
       const data = await getDocs(usersCollection);
       //this spreads the collection so we can obtain just the data and id
       setUser(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+      console.log(data.name)
     }
     getUsers();
   }, []);
