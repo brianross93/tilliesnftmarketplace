@@ -9,13 +9,11 @@ import Create from './components/create/Create';
 import Error from './components/Error';
 import LoginSetup from './LoginSetup';
 import Mint from './Mint';
-import DarkMode from './components/darkmode/darkmode';
 
 export default function App() {
   return (
     <div className='App'>
       <NavBar />
-      <DarkMode />
       <Routes>
         <Route path='/' element={<Home />} exact></Route>
         <Route path='/about' element={<About />}></Route>
