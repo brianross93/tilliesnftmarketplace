@@ -49,8 +49,10 @@ export default function NavBar() {
               <LinkContainer to='/about'>
                 <Nav.Link to='/about'>About</Nav.Link>
               </LinkContainer>
-              <DarkMode />
             </Nav>
+            <div className='toggle'>
+              <DarkMode />
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

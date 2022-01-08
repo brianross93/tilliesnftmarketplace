@@ -2,7 +2,18 @@
   background-color: #435058;
 }
 
+.basic-navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
   width: 150px;
   height: 50px;
+}
+
+.toggle {
+  margin: right;
+  float: right;
 }
