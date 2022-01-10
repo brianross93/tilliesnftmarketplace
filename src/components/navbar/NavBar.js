@@ -29,7 +29,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar bg='light' expand='lg'>
+      <Navbar expand='lg'>
         <Container>
           <Navbar.Brand href='/'>
             <img src={logo} alt='Tillies Logo'></img>

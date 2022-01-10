@@ -2,6 +2,11 @@
   background-color: #435058;
 }
 
+.navbar {
+  margin-bottom: 25px;
+  background-color: rgb(172, 172, 172);
+}
+
 .basic-navbar-nav {
   display: flex;
   justify-content: center;
