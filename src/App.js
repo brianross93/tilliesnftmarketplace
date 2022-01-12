@@ -7,7 +7,6 @@ import About from './components/about/About';
 import Market from './components/market/Market';
 import Create from './components/create/Create';
 import Error from './components/Error';
-import LoginSetup from './LoginSetup';
 import Mint from './Mint';
 
 export default function App() {
@@ -21,7 +20,6 @@ export default function App() {
         <Route path='/create' element={<Create />}></Route>
         <Route element={<Error />}></Route>
       </Routes>
-      <LoginSetup />
       <Mint />
     </div>
   );

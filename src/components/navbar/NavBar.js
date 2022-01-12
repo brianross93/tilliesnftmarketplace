@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import DarkMode from '../darkmode/darkmode';
+import LoginSetup from './LoginSetup';
 import logo from '../navbar/tillieslogonew.png';
 
 fcl
@@ -50,17 +51,17 @@ export default function NavBar() {
                 <Nav.Link to='/about'>About</Nav.Link>
               </LinkContainer>
             </Nav>
+            <div className='login'>
+              <button onClick={() => logIn()}>Log In</button>
+              <button onClick={() => fcl.unauthenticate()}>Log Out</button>
+            </div>
+            <LoginSetup />
             <div className='toggle'>
               <DarkMode />
             </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      <div className='login'>
-        <button onClick={() => logIn()}>Log In</button>
-        <button onClick={() => fcl.unauthenticate()}>Log Out</button>
-      </div>
     </>
   );
 }
