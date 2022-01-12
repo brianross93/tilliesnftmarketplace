@@ -1,6 +1,6 @@
 import React from 'react';
 import './List.css';
-import Mint from '../../Mint.js';
+import Mint from './Mint.js';
 
 function List() {
     return (
