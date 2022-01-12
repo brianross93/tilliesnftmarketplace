@@ -5,10 +5,8 @@ import NavBar from './components/navbar/NavBar';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import MarketPlace from './components/marketplace/MarketPlace';
-import Market from './components/market/Market';
 import List from './components/list/List';
 import Error from './components/Error';
-import LoginSetup from './LoginSetup';
 
 export default function App() {
   return (
@@ -21,7 +19,6 @@ export default function App() {
         <Route path='/list' element={<List />}></Route>
         <Route element={<Error />}></Route>
       </Routes>
-      <LoginSetup />
     </div>
   );
 }
