@@ -41,11 +41,11 @@ export default function NavBar() {
               <LinkContainer to='/'>
                 <Nav.Link to='/'>Home</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/market'>
-                <Nav.Link to='/market'>Market</Nav.Link>
+              <LinkContainer to='/marketplace'>
+                <Nav.Link to='/marketplace'>Marketplace</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/create'>
-                <Nav.Link to='/create'>Create</Nav.Link>
+              <LinkContainer to='/list'>
+                <Nav.Link to='/list'>List an NFT</Nav.Link>
               </LinkContainer>
               <LinkContainer to='/about'>
                 <Nav.Link to='/about'>About</Nav.Link>
