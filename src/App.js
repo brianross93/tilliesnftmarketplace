@@ -4,11 +4,10 @@ import './App.css';
 import NavBar from './components/navbar/NavBar';
 import Home from './components/home/Home';
 import About from './components/about/About';
-import Market from './components/market/Market';
-import Create from './components/create/Create';
+import MarketPlace from './components/marketplace/MarketPlace';
+import List from './components/list/List';
 import Error from './components/Error';
 import LoginSetup from './LoginSetup';
-import Mint from './Mint';
 
 export default function App() {
   return (
@@ -17,12 +16,11 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} exact></Route>
         <Route path='/about' element={<About />}></Route>
-        <Route path='/market' element={<Market />}></Route>
-        <Route path='/create' element={<Create />}></Route>
+        <Route path='/marketplace' element={<MarketPlace />}></Route>
+        <Route path='/list' element={<List />}></Route>
         <Route element={<Error />}></Route>
       </Routes>
       <LoginSetup />
-      <Mint />
     </div>
   );
 }
