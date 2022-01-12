@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.dropdown {
+  margin-right: 50px;
+}
+
 img {
   width: 150px;
   height: 50px;

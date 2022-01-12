@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import DarkMode from '../darkmode/darkmode';
 import LoginSetup from './LoginSetup';
@@ -51,11 +51,25 @@ export default function NavBar() {
                 <Nav.Link to='/about'>About</Nav.Link>
               </LinkContainer>
             </Nav>
-            <div className='login'>
-              <button onClick={() => logIn()}>Log In</button>
-              <button onClick={() => fcl.unauthenticate()}>Log Out</button>
-            </div>
-            <LoginSetup />
+            <Dropdown className='dropdown'>
+              <Dropdown.Toggle variant='dark' id='dropdown-basic'>
+                Menu
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item>
+                  {' '}
+                  <button onClick={() => logIn()}>Log In</button>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <button onClick={() => fcl.unauthenticate()}>Log Out</button>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  {' '}
+                  <LoginSetup />
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <div className='toggle'>
               <DarkMode />
             </div>
