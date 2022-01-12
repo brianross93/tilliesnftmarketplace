@@ -3,6 +3,8 @@ import './Hero.css';
 
 export default function Hero() {
   return (
-    <h1>Hello</h1>
-  )
+    <div className='homepage'>
+      <h1>Home Page</h1>
+    </div>
+  );
 }
