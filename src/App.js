@@ -5,6 +5,7 @@ import NavBar from './components/navbar/NavBar';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import MarketPlace from './components/marketplace/MarketPlace';
+import Market from './components/market/Market';
 import List from './components/list/List';
 import Error from './components/Error';
 import LoginSetup from './LoginSetup';
