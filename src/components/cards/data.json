@@ -1,9 +1,9 @@
 [
   {
-    "title": "",
-    "user": "",
-    "image": "",
-    "price": ""
+    "title": "Monkey",
+    "user": "John Doe",
+    "image": "monkey.jpeg",
+    "price": "4.0"
   }
 
 ]
