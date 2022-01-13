@@ -46,8 +46,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(96, 215, 245);
-  border: 1px solid #108dad;
+  background-color: #808fc7;
+  border: solid 1px #3c4158;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -60,6 +60,7 @@
   left: 3px;
   bottom: 3px;
   background-color: gold;
+  background-color: #e8e8ea;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -67,6 +68,8 @@
 input:checked + .slider {
   background-color: #808fc7;
   border: solid 1px #3c4158;
+  background-color: rgb(96, 215, 245);
+  border: 1px solid #108dad;
 }
 
 input:focus + .slider {
@@ -76,7 +79,7 @@ input:focus + .slider {
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
-  background-color: #e8e8ea;
+  background-color: gold;
   transform: translateX(26px);
 }
 
