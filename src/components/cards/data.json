@@ -4,6 +4,18 @@
     "user": "John Doe",
     "image": "monkey.jpeg",
     "price": "4.0"
+  },
+  {
+    "title": "Benjamin",
+    "user": "John Doe",
+    "image": "benjamin.jpeg",
+    "price": "2.5"
+  },
+  {
+    "title": "Nyan Cat",
+    "user": "John Doe",
+    "image": "nyan.jpeg",
+    "price": "3.0"
   }
 
 ]
