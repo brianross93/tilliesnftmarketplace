@@ -26,12 +26,12 @@ body.dark > div#root > div.App > nav.navbar.navbar-expand-lg.navbar-light {
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
 }
 
-body.light > div#root > div.App > div.footer {
+body.light > div#root > div.App > div.footer > div.footer.p-4 {
   background-color: #bec2c4;
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
 }
 
-body.dark > div#root > div.App > div.footer {
+body.dark > div#root > div.App > div.footer > div.footer.p-4 {
   background-color: #435058;
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
 }

@@ -3,11 +3,18 @@
   position: fixed;
   width: 100%;
   bottom: 0;
-  color: white;
   font-size: 15px;
 }
 
 p {
-  margin: 1rem;
+  margin: 1rem 80rem 1rem 1rem;
   color: rgba(0, 0, 0, 0.55);
+}
+
+.gh {
+  margin: 0 5px 0 10px;
+}
+
+a {
+  margin: 0 5px 0 5px;
 }
