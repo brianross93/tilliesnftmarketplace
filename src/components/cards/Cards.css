@@ -12,3 +12,8 @@
   margin-right: auto;
   z-index: 1;
 }
+
+.cardImg {
+  height: 16rem;
+  object-fit: cover;
+}
