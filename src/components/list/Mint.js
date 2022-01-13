@@ -1,15 +1,13 @@
 // imports
-import './App.css';
-
-import Collection from './Collection.js';
-import SaleCollection from './SaleCollection.js';
+import Collection from '../../Collection.js';
+import SaleCollection from '../../SaleCollection.js';
 import * as fcl from '@onflow/fcl';
 import * as t from '@onflow/types';
 import { useState, useEffect } from 'react';
 import { create } from 'ipfs-http-client';
-import { mintNFT } from './cadence/transactions/mint_nft.js';
-import { listForSaleTx } from './cadence/transactions/list_for_sale.js';
-import { unlistFromSaleTx } from './cadence/transactions/unlist_from_sale.js';
+import { mintNFT } from '../../cadence/transactions/mint_nft.js';
+import { listForSaleTx } from '../../cadence/transactions/list_for_sale.js';
+import { unlistFromSaleTx } from '../../cadence/transactions/unlist_from_sale.js';
 
 const client = create('https://ipfs.infura.io:5001/api/v0');
 

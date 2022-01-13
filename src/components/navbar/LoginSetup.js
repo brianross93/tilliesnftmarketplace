@@ -1,8 +1,8 @@
 // imports
-import './App.css';
+import './NavBar.css';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
-import { setupUserTx } from './cadence/transactions/setup_user.js';
+import { setupUserTx } from '../../cadence/transactions/setup_user.js';
 
 fcl
   .config()
@@ -11,7 +11,7 @@ fcl
 
 function LoginSetup() {
   const [users, setUser] = useState([]);
-  
+
   useEffect(() => {
     // sets the `user` variable to the person that is logged in through Blocto
     fcl.currentUser().subscribe(setUser);
@@ -40,7 +40,7 @@ function LoginSetup() {
     return fcl.tx(transactionId).onceSealed();
   };
   return (
-    <div className='login'>
+    <div className='loginbutton'>
       <button onClick={() => setupUser()}>Setup User</button>
     </div>
   );

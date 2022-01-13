@@ -1,6 +1,6 @@
 :root {
-  --blue: rgb(21, 43, 65);
-  --white: rgb(236, 236, 236);
+  --dark: #525c62;
+  --white: #e9ebeb;
 }
 
 body {
@@ -12,14 +12,34 @@ body {
 
 body.light {
   --background-color: var(--white);
-  --text-color: var(--blue);
+  --text-color: #1418cb;
   --font-weight: 400;
 }
 
+body.light > div#root > div.App > nav.navbar.navbar-expand-lg.navbar-light {
+  background-color: #bec2c4;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+}
+
+body.dark > div#root > div.App > nav.navbar.navbar-expand-lg.navbar-light {
+  background-color: #435058;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+}
+
+body.light > div#root > div.App > div.footer > div.footer.p-4 {
+  background-color: #bec2c4;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+}
+
+body.dark > div#root > div.App > div.footer > div.footer.p-4 {
+  background-color: #435058;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+}
+
 body.dark {
-  --background-color: var(--blue);
-  --text-color: var(--white);
-  --font-weight: 500;
+  --background-color: var(--dark);
+  --text-color: #e8e417;
+  --font-weight: 400;
 }
 
 .App {

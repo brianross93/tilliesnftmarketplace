@@ -1,21 +1,23 @@
-// imports 
+// imports
 import './NavBar.css';
-import React from "react";
-import {Link} from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import DarkMode from '../darkmode/darkmode';
+import LoginSetup from './LoginSetup';
+import logo from '../navbar/tillieslogonew.png';
 
 fcl
   .config()
   .put('accessNode.api', 'https://access-testnet.onflow.org')
   .put('discovery.wallet', 'https://fcl-discovery.onflow.org/testnet/authn');
 
-export default function NavBar() {   
-
+export default function NavBar() {
   const [user, setUser] = useState();
-  
+
   useEffect(() => {
     // sets the `user` variable to the person that is logged in through Blocto
     fcl.currentUser().subscribe(setUser);
@@ -28,39 +30,56 @@ export default function NavBar() {
 
   return (
     <>
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="/">
-        <img
-          src={"./TiLLiES_logo.png"}
-         
-          alt="Tillies logo"
-        />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <LinkContainer to="/">
-              <Nav.Link to="/">Home</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/market">
-              <Nav.Link to="/market">Market</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/create">
-              <Nav.Link to="/create">Create</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/about">
-              <Nav.Link to="/about">About</Nav.Link>
-            </LinkContainer>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <Navbar expand='lg'>
+        <Container>
+          <Navbar.Brand href='/'>
+            <img src={logo} alt='Tillies Logo'></img>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav className='me-auto'>
+              <LinkContainer to='/'>
+                <Nav.Link to='/'>Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/marketplace'>
+                <Nav.Link to='/marketplace'>Marketplace</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/list'>
+                <Nav.Link to='/list'>List an NFT</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/about'>
+                <Nav.Link to='/about'>About</Nav.Link>
+              </LinkContainer>
+            </Nav>
+            <Dropdown className='dropdown' align='end'>
+              <Dropdown.Toggle variant='dark' id='dropdown-basic'>
+                Menu
+              </Dropdown.Toggle>
 
-    <div className="login">
-      <button onClick={() => logIn()}>Log In</button>
-      <button onClick={() => fcl.unauthenticate()}>Log Out</button>
-    </div>
-  </>
+              <Dropdown.Menu>
+                <div className='menu'>
+                  <Dropdown.ItemText>
+                    {' '}
+                    <button onClick={() => logIn()}>Log In</button>
+                  </Dropdown.ItemText>
+                  <Dropdown.ItemText>
+                    <button onClick={() => fcl.unauthenticate()}>
+                      Log Out
+                    </button>
+                  </Dropdown.ItemText>
+                  <Dropdown.ItemText>
+                    {' '}
+                    <LoginSetup />
+                  </Dropdown.ItemText>
+                </div>
+              </Dropdown.Menu>
+            </Dropdown>
+            <div className='toggle'>
+              <DarkMode />
+            </div>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </>
   );
 }

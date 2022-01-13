@@ -2,8 +2,8 @@
   background: transparent url('darkicon.png') no-repeat center;
   background-color: gray;
   background-size: 25px 25px;
-  width: 50px;
-  height: 35px;
+  width: 40px;
+  height: 25px;
   filter: grayscale(100%);
   border: none;
   border-radius: 5px;
@@ -21,4 +21,70 @@
 #darkMode.clicked {
   filter: none !important;
   background-color: rgb(194, 194, 194);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(96, 215, 245);
+  border: 1px solid #108dad;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 3px;
+  background-color: gold;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #808fc7;
+  border: solid 1px #3c4158;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  background-color: #e8e8ea;
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
