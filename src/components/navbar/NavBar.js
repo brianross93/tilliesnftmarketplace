@@ -1,7 +1,6 @@
 // imports
 import './NavBar.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';

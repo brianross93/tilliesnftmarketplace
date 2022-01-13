@@ -24,7 +24,6 @@ function Create() {
 
   return (
     <div className='Create'>
-      <h1>Mint Page</h1>
       {users.map((user) => {
         return (
           <div>
