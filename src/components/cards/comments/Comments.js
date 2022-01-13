@@ -1,6 +1,8 @@
-//imports 
+//imports
 import { Modal, Button } from 'react-bootstrap';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComments } from '@fortawesome/free-solid-svg-icons';
 
 export default function Comments() {
   const [show, setShow] = useState(false);
@@ -10,8 +12,8 @@ export default function Comments() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      <Button variant='primary' onClick={handleShow}>
+        <FontAwesomeIcon icon={faComments} />
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -20,10 +22,10 @@ export default function Comments() {
         </Modal.Header>
         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant='secondary' onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant='primary' onClick={handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>
