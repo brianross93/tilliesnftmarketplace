@@ -8,6 +8,8 @@ import { LinkContainer } from 'react-router-bootstrap';
 import DarkMode from '../darkmode/darkmode';
 import LoginSetup from './LoginSetup';
 import logo from '../navbar/tillieslogonew.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 fcl
   .config()
@@ -52,7 +54,7 @@ export default function NavBar() {
             </Nav>
             <Dropdown className='dropdown' align='end'>
               <Dropdown.Toggle variant='dark' id='dropdown-basic'>
-                Menu
+                <FontAwesomeIcon icon={faUserCircle} />
               </Dropdown.Toggle>
 
               <Dropdown.Menu>

@@ -8,13 +8,12 @@
 }
 
 .text h1 {
-  font-family: "Abril Fatface";
+  font-family: 'Abril Fatface';
   font-size: 3rem;
 }
 
 .text p {
-  width: 1000px;
-  font-family: "Playfair Display";
+  font-family: 'Playfair Display';
   font-size: 1rem;
   text-align: center;
 }

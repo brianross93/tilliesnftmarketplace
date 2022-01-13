@@ -17,6 +17,10 @@
   margin-right: 50px;
 }
 
+.dropdown-toggle {
+  width: 50px;
+}
+
 img {
   width: 150px;
   height: 50px;
@@ -33,6 +37,12 @@ img {
 
 button {
   width: 100px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: rgb(189, 189, 189);
 }
 
 .menu {
