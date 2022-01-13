@@ -5,6 +5,7 @@
 
 .text {
   text-align: center;
+  margin-top: 40px;
 }
 
 .text h1 {
@@ -21,4 +22,23 @@
 .jumbotron img {
   width: 300px;
   height: 300px;
+}
+
+#market-link {
+  border: none;
+  margin-top: 10px;
+  outline: 0;
+  display: inline-block;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.nav-link:hover {
+  color: rgb(77, 77, 77);
 }
