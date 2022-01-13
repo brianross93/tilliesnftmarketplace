@@ -16,6 +16,12 @@ body.light {
   --font-weight: 400;
 }
 
+body.dark {
+  --background-color: var(--dark);
+  --text-color: #e8e417;
+  --font-weight: 400;
+}
+
 body.light > div#root > div.App > nav.navbar.navbar-expand-lg.navbar-light {
   background-color: #bec2c4;
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
@@ -47,8 +53,25 @@ body.dark > div#root > div.App > div.Home > div.jumbotron {
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
 }
 
-body.dark {
-  --background-color: var(--dark);
-  --text-color: #e8e417;
-  --font-weight: 400;
+body.light
+  > div#root
+  > div.App
+  > div.Home
+  > div.Cards
+  > div.card
+  > div.card-body
+  > button.btn.btn-primary {
+  background-color: #63cce1;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+}
+body.dark
+  > div#root
+  > div.App
+  > div.Home
+  > div.Cards
+  > div.card
+  > div.card-body
+  > button.btn.btn-primary {
+  background-color: #e8e417;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
 }
