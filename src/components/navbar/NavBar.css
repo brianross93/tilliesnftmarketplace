@@ -6,6 +6,7 @@
   background-color: rgb(172, 172, 172);
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .basic-navbar-nav {
