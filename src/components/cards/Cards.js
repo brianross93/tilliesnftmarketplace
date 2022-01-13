@@ -1,6 +1,7 @@
 //imports
 import NFTs from './data.json';
 import './Cards.css';
+import { Card, Button } from 'react-bootstrap';
 
 export default function Cards() {
   return(
@@ -8,10 +9,16 @@ export default function Cards() {
       <ul className="NFTs">
         {NFTs.map(l => 
           <li className="card">
-            <img src={process.env.PUBLIC_URL + '/images/' + l.image} alt="card"/>
-            <div className="title">
-                <h3>{l.title}</h3>
-            </div>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={process.env.PUBLIC_URL + '/images/' + l.image} alt="card" style={{ height: '18rem' }}/>
+              <Card.Body>
+                <Card.Title>{l.title}</Card.Title>
+                <Card.Text>
+                  {l.price}
+                </Card.Text>
+                <Button variant="primary">favorite</Button>
+              </Card.Body>
+            </Card>
           </li>
         )}
       </ul>
