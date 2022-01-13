@@ -3,8 +3,9 @@
 }
 
 .navbar {
-  margin-bottom: 25px;
   background-color: rgb(172, 172, 172);
+  position: fixed;
+  width: 100%;
 }
 
 .basic-navbar-nav {
