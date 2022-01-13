@@ -7,6 +7,7 @@ import About from './components/about/About';
 import MarketPlace from './components/marketplace/MarketPlace';
 import List from './components/list/List';
 import Error from './components/Error';
+import Footer from './components/footer/footer';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path='/list' element={<List />}></Route>
         <Route element={<Error />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

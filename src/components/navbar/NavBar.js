@@ -51,23 +51,27 @@ export default function NavBar() {
                 <Nav.Link to='/about'>About</Nav.Link>
               </LinkContainer>
             </Nav>
-            <Dropdown className='dropdown'>
+            <Dropdown className='dropdown' align='end'>
               <Dropdown.Toggle variant='dark' id='dropdown-basic'>
                 Menu
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item>
-                  {' '}
-                  <button onClick={() => logIn()}>Log In</button>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <button onClick={() => fcl.unauthenticate()}>Log Out</button>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  {' '}
-                  <LoginSetup />
-                </Dropdown.Item>
+                <div className='menu'>
+                  <Dropdown.ItemText>
+                    {' '}
+                    <button onClick={() => logIn()}>Log In</button>
+                  </Dropdown.ItemText>
+                  <Dropdown.ItemText>
+                    <button onClick={() => fcl.unauthenticate()}>
+                      Log Out
+                    </button>
+                  </Dropdown.ItemText>
+                  <Dropdown.ItemText>
+                    {' '}
+                    <LoginSetup />
+                  </Dropdown.ItemText>
+                </div>
               </Dropdown.Menu>
             </Dropdown>
             <div className='toggle'>

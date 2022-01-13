@@ -1,4 +1,5 @@
 // imports
+import './NavBar.css';
 import * as fcl from '@onflow/fcl';
 import { useState, useEffect } from 'react';
 import { setupUserTx } from '../../cadence/transactions/setup_user.js';
@@ -39,7 +40,7 @@ function LoginSetup() {
     return fcl.tx(transactionId).onceSealed();
   };
   return (
-    <div className='login'>
+    <div className='loginbutton'>
       <button onClick={() => setupUser()}>Setup User</button>
     </div>
   );

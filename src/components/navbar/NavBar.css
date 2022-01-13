@@ -30,3 +30,14 @@ img {
 .login {
   margin-right: 50px;
 }
+
+button {
+  width: 100px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
