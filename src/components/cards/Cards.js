@@ -4,6 +4,7 @@ import './Cards.css';
 import { Card, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faComments } from '@fortawesome/free-solid-svg-icons';
+import Comments from './comments/Comments';
 
 export default function Cards() {
   return (
@@ -25,6 +26,9 @@ export default function Cards() {
             <Button variant='primary'>
               <FontAwesomeIcon icon={faComments} />
             </Button>
+            <Card.Text>{l.price}</Card.Text>
+            <Button variant='primary'>favorite</Button>
+            <Comments />
           </Card.Body>
         </Card>
       ))}
