@@ -11,4 +11,5 @@ const CreatenftSchema = new Schema({
   comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
 });
 
-module.exports = mongoose.model("Create Nft", CreatenftSchema);
+const Nfts = mongoose.model("Nfts", CreatenftSchema);
+module.exports = Nfts
