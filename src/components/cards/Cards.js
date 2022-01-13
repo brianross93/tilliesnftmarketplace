@@ -2,6 +2,7 @@
 import NFTs from './data.json';
 import './Cards.css';
 import { Card, Button } from 'react-bootstrap';
+import Comments from './comments/Comments';
 
 export default function Cards() {
   return(
@@ -15,6 +16,7 @@ export default function Cards() {
               {l.price}
             </Card.Text>
             <Button variant="primary">favorite</Button>
+            <Comments />
           </Card.Body>
         </Card>
       )}
