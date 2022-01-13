@@ -12,7 +12,7 @@ body {
 
 body.light {
   --background-color: var(--white);
-  --text-color: #1418cb;
+  --text-color: #63cce1;
   --font-weight: 400;
 }
 
@@ -29,10 +29,21 @@ body.dark > div#root > div.App > nav.navbar.navbar-expand-lg.navbar-light {
 body.light > div#root > div.App > div.footer > div.footer.p-4 {
   background-color: #bec2c4;
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+  color: black;
 }
 
 body.dark > div#root > div.App > div.footer > div.footer.p-4 {
   background-color: #435058;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+  color: black;
+}
+
+body.light > div#root > div.App > div.Home > div.jumbotron {
+  background-color: #fcfcfc;
+  transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
+}
+body.dark > div#root > div.App > div.Home > div.jumbotron {
+  background-color: #7d8589;
   transition: background 0.2s ease-in-out, color 0.4s ease-in-out;
 }
 
