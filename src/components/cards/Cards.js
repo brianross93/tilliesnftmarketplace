@@ -24,11 +24,6 @@ export default function Cards() {
             <Button variant='primary'>
               <FontAwesomeIcon icon={faHeart} />
             </Button>
-            <Button variant='primary'>
-              <FontAwesomeIcon icon={faComments} />
-            </Button>
-            <Card.Text>{l.price}</Card.Text>
-            <Button variant='primary'>favorite</Button>
             <Comments />
           </Card.Body>
         </Card>
