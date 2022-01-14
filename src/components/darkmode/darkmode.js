@@ -4,8 +4,8 @@ import './darkmode.css';
 const DarkMode = () => {
   let clickedClass = 'clicked';
   const body = document.body;
-  const lightTheme = 'light';
-  const darkTheme = 'dark';
+  const lightTheme = 'dark';
+  const darkTheme = 'light';
   let theme;
 
   //if (localStorage) {
@@ -34,7 +34,7 @@ const DarkMode = () => {
     <label class='switch'>
       <input
         type='checkbox'
-        className={theme === 'dark' ? clickedClass : ''}
+        className={theme === 'light' ? clickedClass : ''}
         id='darkMode'
         onClick={(e) => switchTheme(e)}
       />

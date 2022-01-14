@@ -1,10 +1,14 @@
 import React from 'react';
 import '../../App.css';
 import Hero from './hero/Hero';
+import Cards from '../cards/Cards';
 
 function Home() {
     return (
-        <Hero />
+        <div className="Home">
+            <Hero />
+            <Cards />
+        </div>
         
     )
 }
