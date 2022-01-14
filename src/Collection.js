@@ -7,9 +7,11 @@ import { getNFTsScript } from './cadence/scripts/get_nfts.js';
 
 function Collection(props) {
   const [nfts, setNFTs] = useState([]);
+  const [user, setUser] = useState();
 
-  useEffect(() => {
+    useEffect(() => {
     getUserNFTs();
+    addUser();
   }, []);
 
   const getUserNFTs = async () => {
@@ -23,6 +25,10 @@ function Collection(props) {
     console.log(result);
     setNFTs(result);
   };
+
+  const addUser = async () => {
+    
+  }
 
   return (
     <div style={{ backgroundColor: 'lightgreen' }}>
