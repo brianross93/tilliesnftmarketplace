@@ -1,0 +1,61 @@
+.Nav {
+  background-color: #435058;
+}
+
+.navbar {
+  background-color: rgb(172, 172, 172);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.basic-navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown {
+  margin-right: 50px;
+}
+
+.dropdown-toggle {
+  width: 50px;
+}
+
+img {
+  width: 150px;
+  height: 50px;
+}
+
+.toggle {
+  margin: right;
+  float: right;
+}
+
+.login {
+  margin-right: 50px;
+}
+
+button {
+  border: none;
+  width: 125px;
+  border-radius: 4px;
+  outline: 0;
+  display: inline-block;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(189, 189, 189);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
