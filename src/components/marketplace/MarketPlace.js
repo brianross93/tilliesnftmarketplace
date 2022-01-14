@@ -1,6 +1,6 @@
 import React from 'react';
 import './MarketPlace.css';
-import Market from './market/Market';
+import Market from '../profile/market/Market';
 import Cards from '../cards/Cards';
 
 function MarketPlace() {
