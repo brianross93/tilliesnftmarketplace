@@ -5,7 +5,7 @@ import Cards from '../cards/Cards';
 
 function MarketPlace() {
   return (
-    <div>
+    <div className='marketplace'>
       <h1>MarketPlace</h1>
       <Market />
       <Cards />
