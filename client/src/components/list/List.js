@@ -100,13 +100,13 @@ const mint = async () => {
       <input type='text' onChange={(e) => {
         setName(e.target.value)
       }} />
-      <label>Id:</label>
+      <label>ID:</label>
       <input type='number' onChange={(e) => {
         setId(e.target.value)
       }} />
       <label>Filename:</label>
        <input type='file' onChange={(e) => setFile(e.target.files[0])} />
-      <label>price:</label>
+      <label>Price:</label>
       <input type='number' onChange={(e) => {
         setPrice(e.target.value)
       }} />
