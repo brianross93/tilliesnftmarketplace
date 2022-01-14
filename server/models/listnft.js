@@ -19,7 +19,7 @@ const ListNftSchema = new mongoose.Schema({
   },
   forSale: {
     type: Boolean,
-    required: true
+    required: false
   }
 });
 

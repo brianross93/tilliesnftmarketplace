@@ -10,14 +10,63 @@ function List() {
   const [price, setPrice] = useState(0)
   const [description, setDescription] = useState('')
   const [forSale, setForSale] = useState(false)
+  
+  let axiosConfig = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+  };
+//experimental read route
+  useEffect(() => {
+    Axios.get('http://localhost:3001/read', axiosConfig)
+    .then(res => {
+      console.log(res.data)
+      setName(res.data[0].name)
+      setId(res.data[0].id)
+      setPrice(res.data[0].price)
+      setDescription(res.data[0].description)
+      setForSale(res.data[0].forSale)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+
+  // const addNft = () => {
+  //   Axios.post('http://localhost:3001/insert', {
+  //     name: name,
+  //     id: id,
+  //     price: price,
+  //     description: description,
+  //     forSale: forSale
+  //   }, axiosConfig)
+  // }
+
+  const addNft = () => {  
+    Axios.post('http://localhost:3001/insert', {
+      name: name,
+      id: id,
+      price: price,
+      description: description,
+      forSale: forSale
+    }, axiosConfig)
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
+  
+
+  
+
 
   useEffect(() => {
-    Axios.post('http://localhost:3001/insert', {
-    name: name,
-    id: id,
-    price: price,
-    description: description,
-    forSale: forSale
+    Axios.get('http://localhost:3001/insert', {
+      params: { name: name, id: id, price: price, description: description, forSale: forSale }  
+      //params: {name: name, id: id, price: price, description: description, forSale: forSale}
 }
 ).then(res => {
     console.log(res)
