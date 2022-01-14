@@ -38,9 +38,15 @@ img {
 }
 
 button {
-  width: 100px;
-  background: transparent;
-  border-radius: 5px;
+  border: none;
+  width: 125px;
+  border-radius: 4px;
+  outline: 0;
+  display: inline-block;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
 }
 
 button:hover {
