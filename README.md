@@ -4,8 +4,6 @@
 <a href="https://github.com/brianross93/tilliesnftmarketplace/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/brianross93/tilliesnftmarketplace?style=plastic"></a>
 <a href="https://github.com/brianross93/tilliesnftmarketplace/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/brianross93/tilliesnftmarketplace?style=plastic"></a>
 
-https://brianross93.github.io/tilliesnftmarketplace/
-
 # Welcome to Tillies NFT Marketplace!
 
 The platform that is Gas Free and built on the Flow blockchain. 
@@ -16,7 +14,7 @@ but users who aren't as familiar with the nft space can seek out advice and know
 
 # How to use the app
 
-[insert link here]
+Go to this link here -> [https://brianross93.github.io/tilliesnftmarketplace/]
 
 Once you've made it to the platform:
 1. Log in with Blocto, itll have you enter an email and send you a code.
