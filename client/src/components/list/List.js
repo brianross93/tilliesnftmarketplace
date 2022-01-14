@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import './List.css';
 import Axios from 'axios';
 // import Mint from './Mint.js';
@@ -11,9 +11,19 @@ function List() {
   const [description, setDescription] = useState('')
   const [forSale, setForSale] = useState(false)
 
-  const addNft = () => {
-    console.log(name + id + price)
-  }
+  useEffect(() => {
+    Axios.post('http://localhost:3001/insert', {
+    name: name,
+    id: id,
+    price: price,
+    description: description,
+    forSale: forSale
+}
+).then(res => {
+    console.log(res)
+} )
+    
+})
   return (
     <div className='list'>
       <label>Name:</label>
@@ -31,6 +41,7 @@ function List() {
       <label>description:</label>
       <input type='text' onChange={(e) => {
         setDescription(e.target.value)
+        setForSale()
       }} />
       <button onClick={addNft}>List NFT</button>
     </div>

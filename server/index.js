@@ -1,3 +1,6 @@
+
+
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -12,7 +15,14 @@ app.get('/', (req, res) => {
     res.send('You are connected!')
 })
 app.get("/insert", async (req, res) => {
-  const nft = new ListModel({ name: "Jessic", id: 2, price: 2.0, description: "test description", forSale: false });
+  
+  const name = req.body.name
+  const id = req.body.id
+  const price = req.body.price
+  const description = req.body.description
+  const forSale = req.body.forSale
+
+  const nft = new ListModel({ name: name, id: id , price: price, description: description, forSale: forSale });
   await nft.save();
   console.log(nft)
   res.send("Inserted DATA");

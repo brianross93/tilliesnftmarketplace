@@ -2,6 +2,7 @@
   "name": "nftdapp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.3.0-beta3",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
