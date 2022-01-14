@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/brianross93/tilliesnftmarketplace/static/css/main.02c91623.chunk.css",
-    "main.js": "/brianross93/tilliesnftmarketplace/static/js/main.3418888f.chunk.js",
-    "main.js.map": "/brianross93/tilliesnftmarketplace/static/js/main.3418888f.chunk.js.map",
-    "runtime-main.js": "/brianross93/tilliesnftmarketplace/static/js/runtime-main.4f0788d8.js",
-    "runtime-main.js.map": "/brianross93/tilliesnftmarketplace/static/js/runtime-main.4f0788d8.js.map",
-    "static/css/2.0a9ec390.chunk.css": "/brianross93/tilliesnftmarketplace/static/css/2.0a9ec390.chunk.css",
-    "static/js/2.f3995076.chunk.js": "/brianross93/tilliesnftmarketplace/static/js/2.f3995076.chunk.js",
-    "static/js/2.f3995076.chunk.js.map": "/brianross93/tilliesnftmarketplace/static/js/2.f3995076.chunk.js.map",
-    "static/js/3.40fac104.chunk.js": "/brianross93/tilliesnftmarketplace/static/js/3.40fac104.chunk.js",
-    "static/js/3.40fac104.chunk.js.map": "/brianross93/tilliesnftmarketplace/static/js/3.40fac104.chunk.js.map",
-    "index.html": "/brianross93/tilliesnftmarketplace/index.html",
-    "static/css/2.0a9ec390.chunk.css.map": "/brianross93/tilliesnftmarketplace/static/css/2.0a9ec390.chunk.css.map",
-    "static/css/main.02c91623.chunk.css.map": "/brianross93/tilliesnftmarketplace/static/css/main.02c91623.chunk.css.map",
-    "static/js/2.f3995076.chunk.js.LICENSE.txt": "/brianross93/tilliesnftmarketplace/static/js/2.f3995076.chunk.js.LICENSE.txt",
-    "static/media/tillieslogonew.25089572.png": "/brianross93/tilliesnftmarketplace/static/media/tillieslogonew.25089572.png"
+    "main.css": "/tilliesnftmarketplace/static/css/main.02c91623.chunk.css",
+    "main.js": "/tilliesnftmarketplace/static/js/main.2bf6d8f0.chunk.js",
+    "main.js.map": "/tilliesnftmarketplace/static/js/main.2bf6d8f0.chunk.js.map",
+    "runtime-main.js": "/tilliesnftmarketplace/static/js/runtime-main.883659d6.js",
+    "runtime-main.js.map": "/tilliesnftmarketplace/static/js/runtime-main.883659d6.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/tilliesnftmarketplace/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.3a41913c.chunk.js": "/tilliesnftmarketplace/static/js/2.3a41913c.chunk.js",
+    "static/js/2.3a41913c.chunk.js.map": "/tilliesnftmarketplace/static/js/2.3a41913c.chunk.js.map",
+    "static/js/3.40fac104.chunk.js": "/tilliesnftmarketplace/static/js/3.40fac104.chunk.js",
+    "static/js/3.40fac104.chunk.js.map": "/tilliesnftmarketplace/static/js/3.40fac104.chunk.js.map",
+    "index.html": "/tilliesnftmarketplace/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/tilliesnftmarketplace/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.02c91623.chunk.css.map": "/tilliesnftmarketplace/static/css/main.02c91623.chunk.css.map",
+    "static/js/2.3a41913c.chunk.js.LICENSE.txt": "/tilliesnftmarketplace/static/js/2.3a41913c.chunk.js.LICENSE.txt",
+    "static/media/tillieslogonew.25089572.png": "/tilliesnftmarketplace/static/media/tillieslogonew.25089572.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f0788d8.js",
+    "static/js/runtime-main.883659d6.js",
     "static/css/2.0a9ec390.chunk.css",
-    "static/js/2.f3995076.chunk.js",
+    "static/js/2.3a41913c.chunk.js",
     "static/css/main.02c91623.chunk.css",
-    "static/js/main.3418888f.chunk.js"
+    "static/js/main.2bf6d8f0.chunk.js"
   ]
 }
