@@ -15,7 +15,6 @@ export default function Cards() {
             variant='top'
             src={process.env.PUBLIC_URL + '/images/' + l.image}
             alt='card'
-            style={{ height: '18rem' }}
             className="cardImg"
           />
           <Card.Body>
