@@ -48,8 +48,8 @@ export default function NavBar() {
               <LinkContainer to='/list'>
                 <Nav.Link to='/list'>List an NFT</Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/about'>
-                <Nav.Link to='/about'>About</Nav.Link>
+              <LinkContainer to='/profile'>
+                <Nav.Link to='/profile'>Profile</Nav.Link>
               </LinkContainer>
             </Nav>
             <Dropdown className='dropdown' align='end'>
