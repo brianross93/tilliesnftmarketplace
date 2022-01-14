@@ -80,7 +80,7 @@ const mint = async () => {
       const transactionId = await fcl
         .send([
           fcl.transaction(mintNFT),
-          fcl.args([fcl.arg(hash, t.String), fcl.arg(setName, t.String)]),
+          fcl.args([fcl.arg(hash, t.String), fcl.arg(name, t.String)]),
           fcl.payer(fcl.authz),
           fcl.proposer(fcl.authz),
           fcl.authorizations([fcl.authz]),
