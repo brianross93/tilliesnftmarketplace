@@ -2,7 +2,6 @@
 import './NavBar.css';
 import React from 'react';
 import * as fcl from '@onflow/fcl';
-import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import DarkMode from '../darkmode/darkmode';
@@ -17,17 +16,10 @@ fcl
   .put('discovery.wallet', 'https://fcl-discovery.onflow.org/testnet/authn');
 
 export default function NavBar() {
-  const [user, setUser] = useState();
-
-  useEffect(() => {
-    // sets the `user` variable to the person that is logged in through Blocto
-    fcl.currentUser().subscribe(setUser);
-  }, []);
-
   const logIn = () => {
     // log in through Blocto
     fcl.authenticate();
-    console.log("Im here")
+    console.log('Im here');
   };
 
   return (
@@ -39,7 +31,6 @@ export default function NavBar() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-          <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
             <Nav className='me-auto'>
               <LinkContainer to='/'>
                 <Nav.Link to='/'>Home</Nav.Link>
