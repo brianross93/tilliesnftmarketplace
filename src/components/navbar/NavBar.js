@@ -27,6 +27,7 @@ export default function NavBar() {
   const logIn = () => {
     // log in through Blocto
     fcl.authenticate();
+    console.log("Im here")
   };
 
   return (
@@ -38,6 +39,7 @@ export default function NavBar() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
+          <h1>Account address: {user && user.addr ? user.addr : ''}</h1>
             <Nav className='me-auto'>
               <LinkContainer to='/'>
                 <Nav.Link to='/'>Home</Nav.Link>
