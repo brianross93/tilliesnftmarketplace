@@ -16,7 +16,9 @@ app.use(express.json());
 app.use(cors());
 app.get('/', (req, res) => {
     res.send('You are connected!')
-})
+
+});
+// Inserts a new NFT into the database from the server side
 app.post("/insert", async (req, res) => {
   
   const name = req.body.name
@@ -30,7 +32,7 @@ app.post("/insert", async (req, res) => {
   console.log(nft)
   res.send("Inserted DATA");
 });
-
+// Gets all NFTs from the database
 app.get("/read", async (req, res) => {
   ListModel.find({}, (err, result) => {
     if (err) {
@@ -40,6 +42,25 @@ app.get("/read", async (req, res) => {
     }
   });
 });
+// Updates a NFT in the database
+app.put("/update", async (req, res) => {
+  const id = req.body.id
+  const name = req.body.name
+  const price = req.body.price
+  const description = req.body.description
+  const forSale = req.body.forSale
+  
+  await ListModel.findOneAndUpdate({ id: id }, { name: name, price: price, description: description, forSale: forSale });
+  res.send("Updated DATA");
+});
+// Deletes a NFT from the database
+app.delete("/delete", async (req, res) => {
+  const id = req.body.id
+  await ListModel.findOneAndDelete({ id: id });
+  res.send("Deleted DATA");
+});
+
+
 
 app.listen(3001, () => {
   console.log("You are connected!");
